@@ -9,7 +9,7 @@
         <% } %>
     <% } %>
 
-    <span class="pagination__page-number">Page <%- page.current %> of <%- page.total %></span>
+    <span class="pagination__page-number">Page <%- page.current || 1 %> of <%- page.total || 1%></span>
     
     <% if (page.next){ %>
         <a class="older-posts pagination__older btn btn-small btn-tertiary" href="/<%- page.next_link %>#blog">更早 &rarr;</a>

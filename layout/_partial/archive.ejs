@@ -20,7 +20,7 @@ if (is_category()) {
   <h1 class="archive-title"><%= __('category_title') %>: <%= title %></h1>
   <hr class="post-list__divider" />
 <% } else if (is_tag()) { %>
-  <h1 class="archive-title"><%= __('tag_title') %>: <%= title %></h1>
+  <h1 class="archive-title"><%= title %></h1>
   <hr class="post-list__divider" />
 <% } else if (is_year() || is_mongth()) { %>
   <h1 class="archive-title"><%= __('archive_title') %>: <%= title %></h1>
