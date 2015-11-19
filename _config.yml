@@ -1,0 +1,27 @@
+menu:
+  创业: /startup
+  #Archives: /archives
+
+rss: /atom.xml
+description: 
+
+social:
+  #weibo: 
+  github: https://github.com/vimer
+  #stack_overflow: 
+  #facebook: 
+  #twitter: 
+
+page_comments: true
+disqus_shortname: vimer
+
+#logo: /images/logo2.jpg
+background:
+  cover: /images/background-cover.jpg
+  color: cover-purple
+
+archive_date_format: MMM DD
+fancybox: true
+
+google_analytics: UA-70385904-1
+favicon: /images/favicon.ico
