@@ -18,7 +18,11 @@ disqus_shortname: vimer
 #logo: /images/logo2.jpg
 background:
   cover: /images/background-cover.jpg
-  color: cover-slate
+  #color: cover-purple
+  #color: cover-slate
+  #color: cover-disabled
+  color: cover-origin
+
 
 archive_date_format: MMM DD
 fancybox: true
