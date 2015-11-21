@@ -37,14 +37,14 @@ if (is_category()) {
 
       <h2 class="post-list__post-title post-title"><a href="<%- config.root %><%- post.path %>" title="link to <%= post.t || post.title %>"><%= post.t || post.title %></a></h2>
 
+        <time datetime="<%= date(post.date, config.date_format) %>" class="post-list__meta--date date"><%= date(post.date, config.date_format) %></time>
       <p class="excerpt">
         <%- post.excerpt %>
       </p>
 
       <div class="post-list__meta">
 
-        <time datetime="<%= date(post.date, config.date_format) %>" class="post-list__meta--date date"><%= date(post.date, config.date_format) %></time> &#8226; 
-
+		<a class="btn-border-small" href="<%- config.root %><%- link%>">阅读全文</a>
         <span class="post-list__meta--tags tags">
           <font class="categories">
             <%- list_categories(post.categories, {
@@ -62,7 +62,6 @@ if (is_category()) {
           <% } %>
 			
         </span>
-		<a class="btn-border-small" href="<%- config.root %><%- link%>">继续阅读</a>
       </div>
 
       <hr class="post-list__divider" />

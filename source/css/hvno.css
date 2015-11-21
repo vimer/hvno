@@ -162,7 +162,8 @@ pre {
   font-size: .9em;
   font-weight: normal;
   line-height: 1.3em;
-  overflow: scroll; }
+  /*overflow: scroll; */
+}
   pre code {
     padding: 0;
     background: none;
@@ -185,6 +186,21 @@ pre {
     .author a:hover,
     .tags a:hover {
       color: #7b0f19; }
+
+.more {
+	font-size:0.9rem;
+	background-color:#000;
+	color:#fff;
+    padding: 2px 10px;
+    line-height: 27px;
+}
+
+.tags-link {
+    padding: 2px 10px;
+    line-height: 27px;
+    color: #666;
+    background: #EAEAEA;
+	font-size: 0.9rem;}	
 
 .excerpt {
   margin: 0;
