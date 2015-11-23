@@ -1,9 +1,18 @@
 <%
 var title = '';
 if (is_category()) {
-     title = page.category;
+	if (page.category == "tech") {
+  		title = "";
+	} else {
+     	title = page.category;
+	}
+	if (page.category == "venture-road") {
+  		title = "";
+	} else {
+     	title = page.category;
+	}
 } else if (is_tag()) {
-	if (page.tag == "Venture Road") {
+	if (page.tag == "venture-road") {
   		title = "疯狂创业路";
 	} else {
   		title = page.tag;
@@ -18,8 +27,8 @@ if (is_category()) {
 <% if (type == 'index' || title == '') { %>
    <!-- do nothing -->
 <% } else if (is_category()) {%>
-  <h1 class="archive-title"><%= __('category_title') %>: <%= title %></h1>
-  <hr class="post-list__divider" />
+  <!--<h3 class="archive-title"><%= title %></h3>
+  <hr class="post-list__divider" />-->
 <% } else if (is_tag()) { %>
   <h1 class="archive-title"><%= title %></h1>
   <hr class="post-list__divider" />
@@ -27,13 +36,9 @@ if (is_category()) {
   <h1 class="archive-title"><%= __('archive_title') %>: <%= title %></h1>
   <hr class="post-list__divider" />
 <% } %>
-
 <div class="main-post-list">
     <ol class="post-list">
     <% page.posts.each(function(post, i){ 
-			/*	if (type == "tech" && post.v_tag && post.v_tag == "疯狂创业路") { 
-					return true;
-				} */
 	var link = post.link || post.path;
 	%>
     <li>
@@ -45,17 +50,20 @@ if (is_category()) {
       <div class="post-list__meta">
 		<a class="btn-border-small" href="<%- config.root %><%- post.path%>">阅读全文</a>
         <span class="post-list__meta--tags tags">
-          <font class="categories">
+		 <% if (post.v_categoryLink) { %>
+			  <a class="category-link" href="<%- config.root %>categories/<%- post.v_categoryLink%>" style=""><%- post.v_category %></a>
+		  <% }  else { %>
             <%- list_categories(post.categories, {
-              show_count: true,
+              show_count: false,
               class: 'categories',
               style: 'none'
             }) %>
-          </font>
+          <% } %>
+
 		 <% if (post.v_link) { %>
 			  <a class="tags-link" href="<%- config.root %>tags/<%- post.v_link %>"><%- post.v_tag %></a>
 		  <% }  else { %>
-          	<% if (post.tags && post.tags.length > 0){ %>
+          	<% if (post.tags && post.tags.length > 0) { %>
             <%- list_tags(post.tags, {
               show_count: false,
               class: 'tags',

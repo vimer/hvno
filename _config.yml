@@ -1,5 +1,6 @@
 menu:
-  创业: /tags/Venture-Road/
+  技术: /categories/tech
+  创业: /categories/venture-road/
   #Archives: /archives
 
 rss: /atom.xml
