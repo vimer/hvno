@@ -7,8 +7,12 @@
     <%- partial('_partial/side-panel', {}) %>
     <div class="content-wrapper">
         <div class="content-wrapper__inner">
-            <%- body %>
-            <%- partial('_partial/footer', {}) %>
+		<!-- <% if (!page.tag) { %>
+			<%- partial('tech') %>
+		<% } else { %> -->
+			<%- body %>
+		<!-- <% } %> -->
+        <%- partial('_partial/footer', {}) %>
         </div>
     </div>
 	<%- js("js/jquery.min.js") %>

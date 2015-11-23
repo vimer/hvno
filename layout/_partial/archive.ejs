@@ -1,17 +1,18 @@
 <%
 var title = '';
-
-
 if (is_category()) {
-  title = page.category;
+     title = page.category;
 } else if (is_tag()) {
-  title = page.tag;
+	if (page.tag == "Venture Road") {
+  		title = "疯狂创业路";
+	} else {
+  		title = page.tag;
+	}
 } else if (is_month()) {
   title = page.year + '/' + page.month;
 } else if (is_year()) {
   title = page.year;
 } 
-
 %>
 
 <% if (type == 'index' || title == '') { %>
@@ -29,22 +30,20 @@ if (is_category()) {
 
 <div class="main-post-list">
     <ol class="post-list">
-    
     <% page.posts.each(function(post, i){ 
+			/*	if (type == "tech" && post.v_tag && post.v_tag == "疯狂创业路") { 
+					return true;
+				} */
 	var link = post.link || post.path;
 	%>
     <li>
-
       <h2 class="post-list__post-title post-title"><a href="<%- config.root %><%- post.path %>" title="link to <%= post.title %>"><%= post.title %></a></h2>
-
         <time datetime="<%= date(post.date, config.date_format) %>" class="post-list__meta--date date"><%= date(post.date, config.date_format) %></time>
       <p class="excerpt">
         <%- post.excerpt %>
       </p>
-
       <div class="post-list__meta">
-
-		<a class="btn-border-small" href="<%- config.root %><%- link%>">阅读全文</a>
+		<a class="btn-border-small" href="<%- config.root %><%- post.path%>">阅读全文</a>
         <span class="post-list__meta--tags tags">
           <font class="categories">
             <%- list_categories(post.categories, {
@@ -53,22 +52,22 @@ if (is_category()) {
               style: 'none'
             }) %>
           </font>
-          <% if (post.tags && post.tags.length > 0){ %>
-              <%- list_tags(post.tags, {
-                show_count: false,
-                style: 'none',
-                class: 'tags'
-              }) %>
-          <% } %>
-			
+		 <% if (post.v_link) { %>
+			  <a class="tags-link" href="<%- config.root %>tags/<%- post.v_link %>"><%- post.v_tag %></a>
+		  <% }  else { %>
+          	<% if (post.tags && post.tags.length > 0){ %>
+            <%- list_tags(post.tags, {
+              show_count: false,
+              class: 'tags',
+              style: 'none'
+            }) %>
+          	<% } %>
+		  <% } %>
         </span>
       </div>
-
       <hr class="post-list__divider" />
     </li>
     <% }); %>
   </ol>
-
   <%- partial('pagination') %>
-
 </div>
