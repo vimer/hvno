@@ -10,5 +10,6 @@
     <%- page.content%>
   </section>
 </article>
+<span class="post-meta__tags tags">&nbsp;<%- partial('_partial/categories',{post: page}) %></span>
 <span class="post-meta__tags tags">&nbsp;<%- partial('_partial/tags',{post: page}) %></span>
 <%- partial('_partial/comments',{}) %>
