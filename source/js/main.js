@@ -53,3 +53,15 @@ $(document).ready(function() {
     $('.btn-mobile-menu__icon').toggleClass('fa fa-list fa fa-angle-up animated fadeIn');
   });
 });
+
+setShareData("http://vimer.me/images/show_favicon.png");
+function setShareData(imgUrl) {
+   if (imgUrl) {
+      var img = new Image();
+      img.src = imgUrl;
+      img.style.position = 'absolute';
+      img.style.left = '-1000px';
+      img.style.top = '-1000px';
+      document.body.insertBefore(img, document.body.firstChild);
+   };
+};

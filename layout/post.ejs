@@ -2,13 +2,16 @@
 
   <header class="post-header">
     <div class="post-meta">
-    <h1 class="post-title"><%= page.title %></h1>
+    <h2 class="post-title post-list__post-title"><%= page.title %></h2>
       <%- partial('_partial/date',{post: page}) %>
 	</div>
   </header>
   <section class="post">
     <%- page.content%>
   </section>
+  <br>
+  <center><font color="#a44a54" size="2px">(转载文章请注明原文出处 <a href='<%= page.link %>' style="font-color:#496b98" target="_blank" rel="external">Vimer.Me)</a></font></center>
+  <br>
 </article>
 <span class="post-meta__tags tags">&nbsp;<%- partial('_partial/categories',{post: page}) %></span>
 <span class="post-meta__tags tags"><%- partial('_partial/tags',{post: page}) %></span>
