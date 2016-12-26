@@ -1,6 +1,6 @@
 menu:
-  技术: /categories/tech
-  创业: /categories/venture-road/
+  技术栈: /categories/tech
+  创业路: /categories/venture-road/
   #Archives: /archives
 
 rss: /atom.xml
@@ -14,7 +14,7 @@ social:
   #twitter: 
 
 page_comments: true
-disqus_shortname: vimer
+disqus_shortname: kissjs
 
 #logo: /images/logo2.jpg
 background:
