@@ -1,6 +1,6 @@
 menu:
-  技术栈: /categories/tech
-  创业路: /categories/venture-road/
+  技术栈: /category/技术
+  创业路: /category/创业路
   #Archives: /archives
 
 rss: /atom.xml
@@ -21,8 +21,8 @@ background:
   cover: /images/background-cover.jpg
   #color: cover-purple
   #color: cover-slate
-  #color: cover-disabled
-  color: cover-origin
+  color: cover-disabled
+  #color: cover-origin
 
 
 archive_date_format: MMM DD

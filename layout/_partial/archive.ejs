@@ -50,7 +50,7 @@ if (is_category()) {
       <div class="post-list__meta">
 		<a class="btn-border-small" href="<%- config.root %><%- post.path%>">阅读全文</a>
         <span class="post-list__meta--tags tags">
-		 <% if (post.v_categoryLink) { %>
+		 <!-- <% if (post.v_categoryLink) { %>
 			  <a class="category-link" href="<%- config.root %>categories/<%- post.v_categoryLink%>" style=""><%- post.v_category %></a>
 		  <% }  else { %>
             <%- list_categories(post.categories, {
@@ -59,6 +59,8 @@ if (is_category()) {
               style: 'none'
             }) %>
           <% } %>
+			  -->
+			<!-- <a class="category-link" href="<%- config.root %>categories/<%- post.categories%>" style=""><%- post.categories %></a> -->
 
 		 <% if (post.v_link) { %>
 			  <a class="tags-link" href="<%- config.root %>tags/<%- post.v_link %>"><%- post.v_tag %></a>
