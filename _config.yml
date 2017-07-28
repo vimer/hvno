@@ -1,6 +1,6 @@
 menu:
-  技术栈: /category/技术
-  创业路: /category/创业路
+  技术栈: /categories/技术
+  创业路: /categories/创业路
   #Archives: /archives
 
 rss: /atom.xml
