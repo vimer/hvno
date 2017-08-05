@@ -1,6 +1,6 @@
 menu:
-  技术栈: /categories/技术
-  创业路: /categories/创业路
+  技术栈: /categories/技术/
+  创业路: /categories/创业路/
   #Archives: /archives
 
 rss: /atom.xml
@@ -8,8 +8,8 @@ description:
 
 social:
   #weibo: 
-  github: https://github.com/vimer
-  #link: https://github.com/vimer
+  #github: https://github.com/vimer
+  excellent_blog: /excellent-blogs
   #facebook: 
   #twitter: 
 
