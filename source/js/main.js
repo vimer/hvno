@@ -54,7 +54,7 @@ $(document).ready(function() {
   });
 });
 
-setShareData("http://vimer.me/images/show_favicon.png");
+setShareData("http://vimer.me/images/favicon.ico");
 function setShareData(imgUrl) {
    if (imgUrl) {
       var img = new Image();
