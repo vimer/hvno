@@ -14,7 +14,6 @@
 	<%- js("http://okf337562.bkt.clouddn.com/jquery.min.js") %>
 	<%- js("http://okf337562.bkt.clouddn.com/main.js") %>
 	<%- js("http://okf337562.bkt.clouddn.com/highlight.min.js") %>
-	<script>hljs.initHighlightingOnLoad();</script>
     <%- partial('_partial/google_analytics') %>
 </body>
 </html>
@@ -33,6 +32,12 @@ function isPC() {
 	}
 	return flag;
 }
+
+$(document).ready(function() {
+  $('pre code').each(function(i, block) {
+    hljs.highlightBlock(block);
+  });
+});
 /*if (!isPC()) {
 	document.title = "";
 }*/
