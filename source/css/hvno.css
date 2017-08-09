@@ -18,6 +18,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 body {
   line-height: 1; }
 
+
 ol, ul {
   list-style: none; }
 
@@ -97,7 +98,9 @@ h5 {
   margin-bottom: .5em;
   font-family: "ff-tisa-web-pro-1", "ff-tisa-web-pro-2", "Lucida Grande", "Hiragino Sans GB", "Hiragino Sans GB W3", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
   font-weight: lighter;
-  color: #333333;
+  /*font-weight: bold;*/
+  /*color: #333333;*/
+  color: #212121;
   -webkit-font-smoothing: antialiased; }
 
 h1 {
@@ -867,3 +870,12 @@ input[type="tel"] {
   .btn, .navigation__item a {
     /*display: block;*/
     margin-bottom: .4em; } }
+
+h3 {
+	font-size: 24px;
+	padding: 10px;
+	border-left: 3px solid #e4e4e4;
+	margin-top: 30px;
+	margin-bottom: 10px;
+	background: #f5f5f5;
+}
