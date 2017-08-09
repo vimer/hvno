@@ -43,10 +43,13 @@ th {
 	font-weight: bold;
 	border-bottom: 3px solid #ddd;
 	padding-bottom: 0.5em;
+	padding-top: 0.5em;
+	border: 1px solid #ddd;
 }
 td {
 	border-bottom: 1px solid #ddd;
 	padding: 10px 0;
+	border: 1px solid #ddd;
 }
 
 
@@ -169,7 +172,8 @@ code {
   word-wrap: break-word; }
 
 pre {
-  margin-bottom: 0em;
+  margin-top: -1.2em;
+  margin-bottom: -1em;
   padding: 0.8em 0;
   /*background: #e8f2fb;*/
   /*border: 1px solid #c9e1f6;*/
